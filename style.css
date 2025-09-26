@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(to left, #87EFF6, #fff);
+    background: linear-gradient(to left, #87EFF6, #fff);
 }
 
 :root {
@@ -18,7 +18,7 @@ body {
 .header {
     display: flex;
     flex-direction: row;
-    padding: 40px, 80px;
+    padding: 40px 80px;
     justify-content: space-between;
 
     h1 {
@@ -28,37 +28,234 @@ body {
     }
 }
 
-
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 40px 80px;
+}
 
 .nav {
     display: flex;
     align-items: center;
     padding: 40px 80px;
     gap: 50px;
+
+    a {
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+        color: var(--text-color);
+    }
 }
 
 .main {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 40px;
-    padding: 80px;
+    padding: 40px;
 }
 
-.content {
+.le {
     display: flex;
-    flex-direction: column;
+    gap: 58px;
     width: 604px;
-    height: 215px;
-    gap: 16px;
+    flex-direction: column;
 
-.p1 {
-    color: var(--text-color-red);
+
+    .p1 {
+        color: var(--text-color-red);
+        font-size: 24px;
+    }
+
+    .p2 {
+        color: var(--text-color);
+        font-weight: 800;
+        font-size: 40px;
+    }
+
+    .p3 {
+        color: var(--text-color);
+        font-size: 18px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .btns {
+            display: flex;
+            gap: 16px;
+        }
+
+    }
 }
 
 .btns {
-    
+    display: flex;
+    gap: 16px;
+
+    #btn1 {
+        padding: 16px;
+        color: var(--text-color);
+        background-color: var(--btn-color);
+        border-radius: 16px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #btn2 {
+        padding: 16px;
+        color: var(--text-color);
+        border: solid var(--btn-color) 3px;
+        border-radius: 16px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
+
 }
 
+.ld {
+    display: flex;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 990px) {
+
+    .logo {
+    font-size: 15px;
+    }
+
+    .nav {
+        a {
+            font-size: 11px;
+        }
+    }
+
+    .main {
+
+        .p1 {
+            color: var(--text-color-red);
+            font-size: 18px;
+        }
+
+        .p2 {
+            color: var(--text-color);
+            font-weight: 800;
+            font-size: 23px;
+        }
+
+        .p3 {
+            color: var(--text-color);
+            font-size: 12px;
+        }
+
+    }
+
+    .btns {
+
+        #btn1 {
+            padding: 8px;
+            font-size: 10px;
+        }
+
+        #btn2 {
+            padding: 8px;
+            font-size: 10px;
+        }
+
+    }
+
+    img {
+        width: 430px;
+        height: 320px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    body{
+        justify-content: center ;
+    }
+
+    .logo {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    }
+
+    .header{
+        padding: 0px;
+    }
+
+    .nav {
+        a {
+            font-size: 8px;
+        }
+    }
+
+    .main {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+        .le {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .p1 {
+            font-size: 16px;
+        }
+
+        .p2 {
+            font-size: 20px;
+        }
+
+        .p3 {
+            font-size: 13px;
+        }
+
+    }
+
+    .btns {
+        align-items: center;
+        justify-content: center;
+
+        #btn1 {
+            padding: 10px;
+            font-size: 10px;
+        }
+
+        #btn2 {
+            padding: 10px;
+            font-size: 10px;
+        }
+
+    }
+
+    .ld {
+        width: 330px;
+        height: 230px;
+
+        img {
+            
+            width: 300px;
+            height: 200px;
+        }
+    }
 
 
 
